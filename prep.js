@@ -154,4 +154,45 @@ for (let key in candidate) {
   console.log(key, ":", candidate[key]);
 }
 
-//
+//Functions in JS
+
+function greets(){
+    console.log("Hiee Good Evening..!!!!!!")
+}
+
+greets()
+
+function add(x,y){
+    console.log(x+y)
+}
+add(3,4)
+
+// function as an expression
+
+var a = function(x,y,z){  //anonymous function - does not have any name 
+    console.log(x+y+z)
+}
+a(10,30,60)
+
+console.log()
+
+//Hoisting
+//Hoisting means JavaScript moves declarations to the top of the scope before running the code.
+// ~ move declaration over top 
+
+console.log(t)
+prep()
+
+
+var t = 21
+
+function prep(){
+    console.log("Welcome to scalar")
+}
+
+//execution context ~ imaginary container contaions 
+// memory phase (memory phase ) ~ a : undefined { key value pairs }
+// fn : greet
+// code execution ~ 
+
+
