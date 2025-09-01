@@ -195,4 +195,59 @@ function prep(){
 // fn : greet
 // code execution ~ 
 
+// ES ~ Ecma Script
+// Problems with variables declared with VAR
+// variables declared with var are not  blocked scoped they are  function scoped 
 
+// VAR ~ Redeclaration - yes  / Reassignemnt - yes  / Scoping  - function scoped
+// LET  ~ Redeclaration - no   / Reassignemnt - yes  / Scoping  - blocked scoped 
+// CONST ~ Redeclaration- no   / Reassignemnt - no   / Scoping  - blocked scoped 
+
+
+
+
+// ARROW functions 
+
+let test1 = () => {
+    console.log(1)
+}
+let test2 = a =>{
+    console.log(a*2)
+}
+let test3 = (a , b) =>  {
+    console.log(a+b)
+}
+
+test1()
+test2(2)
+test3(2,6)
+
+//Template literal & multi line strings
+console.log(`This
+    is
+    Template
+    Lieral`)
+
+a = 34
+console.log(`My age is ${a}`)
+
+// Destructuring arrays
+
+let destruc = ['Hi' , 'I' , 'AM' , 'Navv']
+var [ a , b , c , d] = destruc
+console.log(d)
+
+// Call back functions 
+
+// function passed into another function as an argument 
+
+function printFistName(firstName , cb){
+    console.log(firstName)
+    cb("Rogers")
+}
+
+function printLastName(lastName){
+    console.log(lastName)
+}
+
+printFistName("Steve" , printLastName)
