@@ -1,3 +1,5 @@
+
+
 // SOURCE SCALAR 
 
 // Understanding basics 
@@ -251,3 +253,140 @@ function printLastName(lastName){
 }
 
 printFistName("Steve" , printLastName)
+
+// OOPS 
+
+// 4 pillars 
+// Encapsulation / abstraction / polyformism , inheritance 
+
+// This keyword in JS ~ refers to object executing the current function
+// reference a particular object 
+
+console.log(this) // refers to empty object
+
+function display(){
+    console.log(this)  // refers to global object 
+}
+
+display()
+
+let obj = {
+    name : 'nAV',
+    age : 23,
+
+    myfn : function(){
+        console.log(this) // function isnide obj referes to object itsef 
+    }
+}
+obj.myfn()
+
+// Constructor function ~ 
+
+
+function createCar(name , company , color){
+    this.name = name
+    this.company = company
+    this.color = color
+
+}
+
+let car1 = new createCar('X4' , 'B&W' , 'red')
+
+console.log(car1)
+
+// Classes in JS 
+
+class Person {
+    constructor(name , age ){
+        this.name =name
+        this.age = age
+    }
+
+    welcome(){
+        console.log(` Welcome ${this.name}`)
+    }
+}
+
+
+let Person1 = new Person("Harry" , 22)
+console.log(Person1)
+Person1.welcome()
+
+// Inheritance
+
+// Base class
+class Personx {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+// Derived class
+class Teacher extends Person {
+  constructor(name, age, classStrength) {
+    super(name, age); // Call parent constructor
+    this.classStrength = classStrength;
+  }
+}
+
+// Another derived class
+class Student extends Person {
+  constructor(name, age, grade) {
+    super(name, age);  // Call parent constructor
+    this.grade = grade;
+  }
+}
+
+// Creating objects
+let person1 = new Personx("Adam", 23);
+let teacher1 = new Teacher("Mark", 40, 100);
+let student1 = new Student("Sara", 19, "A");
+
+// Logs
+console.log(person1);
+console.log(teacher1);
+console.log(student1);
+
+console.log()
+// Asynchronous Programming
+// Synchronous ~ means it will use a single thread , so only one operation will run at a time
+// Asynchronous ~ non blocking , means it will send multiple requests to a sever at a time
+
+
+// set timeout 
+
+
+// setTimeout(() => {
+//     console.log("Hello from the setTimeout")
+// }, 5000);
+
+
+// setInterval(() => {
+//     console.log("Hello from the setInterval")
+    
+// }, 1000);
+
+// Prmoises in JS 
+// A Promise is like a container for a future value.
+// It can be in one of three states:
+// Pending  (still working)
+// Resolved / Fulfilled (successful)
+// Rejected ( failed )
+
+// let myPromise = new Promise((resolve, reject) => {
+//   resolve(" Hello, Promise!");
+// });
+
+// myPromise.then(result => {
+//   console.log(result); // prints: Hello, Promise!
+// });
+
+// Miscellaneous Topics
+
+let q = 2
+let w = '2'
+console.log(q==w) // go for values 
+console.log(q===w) // go for datatype too
+
+
